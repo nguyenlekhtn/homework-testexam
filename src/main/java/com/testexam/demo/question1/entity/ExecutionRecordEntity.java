@@ -1,9 +1,6 @@
 package com.testexam.demo.question1.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,17 +15,22 @@ public class ExecutionRecordEntity {
     @Id
     @GeneratedValue
     @NotNull
-    private Integer serno;
+    @Column(name = "serno")
+    private Integer serNo;
 
     @NotNull
+    @Column(name = "serviceName")
     private String serviceName;
 
     @NotNull
+    @Column(name = "msgid")
     private String msgId;
 
     @NotNull
+    @Column(name = "requestPayload")
     private String requestPayload;
 
     @NotNull
+    @Column(name = "request_timestamp")
     private LocalDateTime requestTimestamp;
 }
