@@ -1,13 +1,13 @@
-package com.testexam.demo.entity;
+package com.testexam.demo.question1.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Getter
@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 @Table(name = "execution_record")
 public class ExecutionRecordEntity {
     @Id
+    @GeneratedValue
     @NotNull
     private Integer serno;
 
