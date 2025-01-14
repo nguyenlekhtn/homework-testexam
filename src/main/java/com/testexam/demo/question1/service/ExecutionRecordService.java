@@ -1,6 +1,7 @@
 package com.testexam.demo.question1.service;
 
 import com.testexam.demo.question1.dao.ExecutionRecordDAO;
+import com.testexam.demo.question1.entity.ExecutionRecordEntity;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.lang.Nullable;
@@ -19,6 +20,8 @@ public class ExecutionRecordService implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
-        // logic to map request to ExecutionRecordEntity and save by ExecutionRecordDAO
+        ExecutionRecordEntity entity = new ExecutionRecordEntity();
+        // logic to add request info to ExecutionRecordEntity
+        executionRecordDAO.save(entity);
     }
 }
