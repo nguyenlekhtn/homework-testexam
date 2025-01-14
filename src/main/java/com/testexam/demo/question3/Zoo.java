@@ -15,6 +15,10 @@ class Zoo {
 class AnimalGroup {
     private List<Animal> animals;
 
+    public AnimalGroup(List<Animal> animals) {
+        this.animals = animals;
+    }
+
     public void eat() {
         animals.forEach(Animal::eat);
     }
