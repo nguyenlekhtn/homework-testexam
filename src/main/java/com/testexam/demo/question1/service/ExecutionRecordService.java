@@ -19,6 +19,6 @@ public class ExecutionRecordService implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
-        // logic to map request to ExecutionRecordEntity and save
+        // logic to map request to ExecutionRecordEntity and save by ExecutionRecordDAO
     }
 }
